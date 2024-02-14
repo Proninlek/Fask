@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Главная страница{% endblock %}</title>
+</head>
+<body>
+{% block header %}
+<header>
+    Очень красивая шапка
+</header>
+{% endblock %}
+
+{% block menu %}
+<nav class="menu">
+    <ul>
+        <l1><a href="{{ url_for('cloth') }}">Одежда</a> </l1>
+        <l1><a href="{{ url_for('shoes') }}">Обувь</a> </l1>
+        <l1><a href="{{ url_for('jacket') }}">Куртка</a> </l1>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    Любая информация
+</div>
+{% endblock %}
+
+{% block footer %}
+<footer>
+    Подвал
+</footer>
+{% endblock %}
+</body>
+</html>
