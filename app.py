@@ -2,6 +2,12 @@ from flask import Flask, render_template, url_for, request, make_response, redir
 
 app = Flask(__name__)
 
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+
 @app.route('/cloth/')
 def cloth():
     return render_template('cloth.html')
